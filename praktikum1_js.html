@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 1</title>
+</head>
+<body>
+    <script>
+        function hitungDiskon(totalPembelian) { 
+            if (totalPembelian < 100000){ 
+                console.log("Total belanja sebelum diskon: " + totalPembelian);
+                let diskon = totalPembelian * 0;
+                console.log("Diskon yang didapat:" + diskon);
+                potongan = totalPembelian - diskon; 
+                console.log("Total belanja setelah diskon : " + potongan); 
+            } else if (totalPembelian >= 100000){ 
+                console.log("Total belanja sebelum diskon: " + totalPembelian); 
+                let diskon = totalPembelian * 0.05; 
+                console.log("Diskon yang didapat: " + diskon); 
+                potongan = totalPembelian - diskon; 
+                console.log("Total belanja setelah diskon: " + potongan); 
+            } else if (totalPembelian >= 250000){ 
+                console.log("Total belanja sebelum diskon: " + totalPembelian); 
+                let diskon = totalPembelian * 0.15; 
+                console.log("Diskon yang didapat: " + diskon); 
+                potongan = totalPembelian - diskon; 
+                console.log("Total belanja setelah diskon: " + potongan); 
+            } 
+        } 
+ 
+        hitungDiskon(80000) 
+        hitungDiskon(120000) 
+        hitungDiskon(320000)
+    </script>
+</body>
+</html>

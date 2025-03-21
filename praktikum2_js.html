@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 2</title>
+</head>
+<body>
+    <script>
+          function Kecepatan(kecepatanArray) {
+            var total = 0;
+            var kecepatanTertinggi = kecepatanArray[0];
+            var kecepatanTerendah = kecepatanArray[0];
+
+            for (var i = 0; i < kecepatanArray.length; i++) {
+                var kecepatan = kecepatanArray[i];
+                total += kecepatan;
+
+                if (kecepatan > kecepatanTertinggi) {
+                    kecepatanTertinggi = kecepatan;
+                }
+
+                if (kecepatan < kecepatanTerendah) {
+                    kecepatanTerendah = kecepatan;
+                }
+
+                var status = '';
+                if (kecepatan <= 40) {
+                    status = 'Lambat';
+                } else if (kecepatan > 40 && kecepatan <= 80) {
+                    status = 'Normal';
+                } else {
+                    status = 'Terlalu cepat';
+                }
+
+                console.log("Titik " + (i + 1) + ": " + kecepatan + " km/jam - " + status);
+            }
+
+            var rataRata = total / kecepatanArray.length;
+            console.log("\nHasil Analisis:");
+            console.log("Kecepatan rata-rata: " + rataRata.toFixed(2) + " km/jam");
+            console.log("Kecepatan tertinggi: " + kecepatanTertinggi + " km/jam");
+            console.log("Kecepatan terendah: " + kecepatanTerendah + " km/jam");
+        }
+
+        var kecepatanArray = [58, 68, 27, 40, 90, 120, 70];
+        Kecepatan(kecepatanArray);
+    </script>
+</body>
+</html>

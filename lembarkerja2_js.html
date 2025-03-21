@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lembar Kerja 2</title>
+</head>
+<body>
+    <script>
+        function sapaPengguna(nama, jumlah) {
+            if (jumlah <= 0) return;
+            console.log("Selamat datang,", nama + "!");
+            sapaPengguna(nama, jumlah - 1);
+        }
+        sapaPengguna("Risa", 3);
+
+        function tampilkanAngka(arr) {
+            let total = 0;
+            for (let i = 0; i < arr.length; i++) {
+                console.log("Angka ke-", i, "adalah", arr[i]);
+
+                total += arr[i];
+
+                if (arr[i] % 2 === 0) {
+                    console.log(arr[i], "adalah angka genap");
+                } else {
+                    console.log(arr[i], "adalah angka ganjil");
+                }
+            }
+            console.log("Total jumlah angka  dalam array:", total);
+        }
+        let angka = [10,21,30,41,50];
+        tampilkanAngka(angka);
+
+        function cekNilai(nilai) {
+            let kategori = ["A+", "A", "B+", "B", "C+", "C", "D", "E"];
+            let batasNilai = [95,90,85,80,75,70,60,0];
+
+            for(let i = 0; i < batasNilai.length; i++) {
+                if (nilai >= batasNilai[i]) {
+                    console.log(`Nilai Anda ${kategori[i]}`);
+                    return;
+                }
+            }
+        }
+        cekNilai(75);
+    </script>
+</body>
+</html>
